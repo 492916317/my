@@ -202,9 +202,9 @@ def vgg_bn_drop(input):
 
 ### ResNet
 
-ResNet模型的第1、3、4步和VGG模型相同，这里不再介绍。主要介绍第2步即CIFAR10数据集上ResNet核心模块。
+CIFAR10数据集上ResNet核心模块。
 
-先介绍`resnet_cifar10`中的一些基本函数，再介绍网络连接过程。
+`resnet_cifar10`中的一些基本函数，再介绍网络连接过程。
 
   - `conv_bn_layer` : 带BN的卷积层。
   - `shortcut` : 残差模块的"直连"路径，"直连"实际分两种形式：残差模块输入和输出特征通道数不等时，采用1x1卷积的升维操作；残差模块输入和输出通道相等时，采用直连操作。
